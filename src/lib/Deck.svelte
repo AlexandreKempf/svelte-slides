@@ -44,7 +44,7 @@
 <svelte:window on:keydown={handleKeydown} />
 <div
 	class="min-w-full-screen min-h-screen"
-	use:swipe={{ timeframe: 500, minSwipeDistance: 100 }}
+	use:swipe={{ timeframe: 500, minSwipeDistance: 100, touchAction: "pan-y" }}
 	on:swipe={handleSwipe}
 >
 	<slot />

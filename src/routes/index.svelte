@@ -61,7 +61,7 @@
 				</p>
 			</div>
 			<div class="lg:w-11/24 w-22/24">
-				<img src="./static/14.svg" alt="cool" class="rounded-20" />
+				<img src="14.svg" alt="cool" class="rounded-20" />
 			</div>
 		</div>
 	</Slide>
