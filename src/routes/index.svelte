@@ -277,7 +277,7 @@
 	</Slide>
 
 	<Slide>
-		<div class="flex flex-col min-h-screen pt-15">
+		<div class="flex flex-col min-h-screen pt-15 ml-8">
 			<p
 				class="font-sans font-bold text-sm text-blue-600 tracking-widest uppercase"
 			>
