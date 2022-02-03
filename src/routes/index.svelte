@@ -176,7 +176,7 @@
 			</p>
 			<div class="flex flex-wrap min-w-full justify-around">
 				<div
-					class="xl:w-11/36 md:w-8/18 border border-gray-200 p-6 m-4 rounded-lg"
+					class="xl:w-11/36 md:w-8/18 border border-gray-200 p-6 m-4 ml-0 rounded-lg"
 				>
 					<div class="i-openmoji-shooting-star text-5xl" />
 					<h2
@@ -192,7 +192,7 @@
 					</p>
 				</div>
 				<div
-					class="xl:w-11/36 md:w-8/18 border border-gray-200 p-6 m-4 rounded-lg"
+					class="xl:w-11/36 md:w-8/18 border border-gray-200 p-6 m-4 ml-0 rounded-lg"
 				>
 					<div class="i-openmoji-test-tube text-5xl" />
 					<h2
@@ -208,7 +208,7 @@
 					</p>
 				</div>
 				<div
-					class="xl:w-11/36 md:w-8/18 border border-gray-200 p-6 m-4 rounded-lg"
+					class="xl:w-11/36 md:w-8/18 border border-gray-200 p-6 m-4 ml-0 rounded-lg"
 				>
 					<div class="i-openmoji-ringed-planet text-5xl" />
 					<h2
@@ -224,7 +224,7 @@
 					</p>
 				</div>
 				<div
-					class="xl:w-11/36 md:w-8/18 border border-gray-200 p-6 m-4 rounded-lg"
+					class="xl:w-11/36 md:w-8/18 border border-gray-200 p-6 m-4 ml-0 rounded-lg"
 				>
 					<div class="i-openmoji-violin text-5xl" />
 					<h2
@@ -240,7 +240,7 @@
 					</p>
 				</div>
 				<div
-					class="xl:w-11/36 md:w-8/18 border border-gray-200 p-6 m-4 rounded-lg"
+					class="xl:w-11/36 md:w-8/18 border border-gray-200 p-6 m-4 ml-0 rounded-lg"
 				>
 					<div class="i-openmoji-radioactive text-5xl" />
 					<h2
@@ -256,7 +256,7 @@
 					</p>
 				</div>
 				<div
-					class="xl:w-11/36 md:w-8/18 border border-gray-200 p-6 m-4 rounded-lg"
+					class="xl:w-11/36 md:w-8/18 border border-gray-200 p-6 m-4 ml-0 rounded-lg"
 				>
 					<div class="i-openmoji-shower text-5xl" />
 					<h2
