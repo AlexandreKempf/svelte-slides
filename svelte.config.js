@@ -31,7 +31,7 @@ const config = {
               provider: 'google', // default provider
               fonts: {
                 // these will extend the default theme
-                sans: 'Inter var',
+                sans: 'Inter',
               },
             })
           ],

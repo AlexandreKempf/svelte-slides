@@ -29,6 +29,6 @@
     "cookie": "^0.4.1",
     "svelte-gestures": "^1.4.1",
     "svelte-preprocess": "^4.10.2",
-    "unocss": "^0.22.6"
+    "unocss": "^0.22.7"
   }
 }
