@@ -1,4 +1,6 @@
 {
+  "name": "svelte-slides",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
     "dev": "svelte-kit dev",
@@ -7,14 +9,26 @@
     "preview": "svelte-kit preview"
   },
   "devDependencies": {
+    "@iconify-json/mdi": "^1.0.16",
+    "@iconify-json/openmoji": "^1.0.5",
+    "@iconify-json/twemoji": "^1.0.2",
     "@sveltejs/adapter-auto": "next",
     "@sveltejs/kit": "next",
+    "@unocss/preset-icons": "^0.22.7",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-svelte3": "^3.2.1",
+    "prettier": "^2.4.1",
+    "prettier-plugin-svelte": "^2.4.0",
     "svelte": "^3.44.0"
   },
   "type": "module",
   "dependencies": {
     "@fontsource/fira-mono": "^4.5.0",
     "@lukeed/uuid": "^2.0.0",
-    "cookie": "^0.4.1"
+    "cookie": "^0.4.1",
+    "svelte-gestures": "^1.4.1",
+    "svelte-preprocess": "^4.10.2",
+    "unocss": "^0.22.6"
   }
 }
