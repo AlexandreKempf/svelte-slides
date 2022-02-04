@@ -8,104 +8,6 @@
 <Deck>
 	<Slide>
 		<div class="flex flex-col min-h-screen justify-center">
-			<h1
-				class="font-sans font-black text-neutral-900 text-center text-7xl tracking-tighter max-w-5/6 mx-auto my-8 leading-none"
-			>
-				Long headline to turn your visitors into users.
-			</h1>
-			<p
-				class="font-sans font-normal text-center text-lg text-gray-500 max-w-4/6 mx-auto mt-8 leading-relaxed"
-			>
-				Free and Premium themes, UI Kit's, templates and landing pages
-				built with Tailwind CSS, HTML & Next.js.
-			</p>
-			<div class="flex flex-wrap justify-center mt-8">
-				<div
-					class="flex w-5/6 md:w-1/3 items-center bg-gray-100 rounded-lg space-x-3 space-y-0 p-5 m-3"
-				>
-					<div class="i-openmoji-check-mark shrink-0 text-4xl" />
-					<h2
-						class="font-sans font-normal text-neutral-900 mt-6 text-2xl"
-					>
-						Authentic Cliche Forage
-					</h2>
-				</div>
-				<div
-					class="flex w-5/6 md:w-1/3 items-center bg-gray-100 text-3xl rounded-lg space-x-3 space-y-0 p-5 m-3"
-				>
-					<div class="i-openmoji-check-mark shrink-0 text-4xl" />
-					<h2
-						class="font-sans font-normal text-neutral-900 mt-6 text-2xl"
-					>
-						Coloring Book Ethical
-					</h2>
-				</div>
-				<div
-					class="flex w-5/6 md:w-1/3 items-center bg-gray-100 text-3xl rounded-lg space-x-3 space-y-0 p-5 m-3"
-				>
-					<div class="i-openmoji-check-mark shrink-0 text-4xl" />
-					<h2
-						class="font-sans font-normal text-neutral-900 mt-6 text-2xl"
-					>
-						Pack Truffaut Blue
-					</h2>
-				</div>
-				<div
-					class="flex w-5/6 md:w-1/3 items-center bg-gray-100 text-3xl rounded-lg space-x-3 space-y-0 p-5 m-3"
-				>
-					<div class="i-openmoji-cross-mark shrink-0 text-4xl" />
-					<h2
-						class="font-sans font-normal text-neutral-900 mt-6 text-2xl"
-					>
-						Kinfolk Chips Snackwave
-					</h2>
-				</div>
-				<div
-					class="flex w-5/6 md:w-1/3 items-center bg-gray-100 text-3xl rounded-lg space-x-3 space-y-0 p-5 m-3"
-				>
-					<div class="i-openmoji-cross-mark shrink-0 text-4xl" />
-					<h2
-						class="font-sans font-normal text-neutral-900 mt-6 text-2xl"
-					>
-						Typewriter Polaroid Cray
-					</h2>
-				</div>
-				<div
-					class="flex w-5/6 md:w-1/3 items-center bg-gray-100 text-3xl rounded-lg space-x-3 space-y-0 p-5 m-3"
-				>
-					<div class="i-openmoji-cross-mark shrink-0 text-4xl" />
-					<h2
-						class="font-sans font-normal text-neutral-900 mt-6 text-2xl"
-					>
-						The Catcher In The Rye
-					</h2>
-				</div>
-				<div
-					class="flex w-5/6 md:w-1/3 items-center bg-gray-100 text-3xl rounded-lg space-x-3 space-y-0 p-5 m-3"
-				>
-					<div class="i-openmoji-check-mark shrink-0 text-4xl" />
-					<h2
-						class="font-sans font-normal text-neutral-900 mt-6 text-2xl"
-					>
-						Raw Denim Heirloom
-					</h2>
-				</div>
-				<div
-					class="flex w-5/6 md:w-1/3 items-center bg-gray-100 text-3xl rounded-lg space-x-3 space-y-0 p-5 m-3"
-				>
-					<div class="i-openmoji-check-mark shrink-0 text-4xl" />
-					<h2
-						class="font-sans font-normal text-neutral-900 mt-6 text-2xl"
-					>
-						Blue Bottle Crucifix
-					</h2>
-				</div>
-			</div>
-		</div>
-	</Slide>
-
-	<Slide>
-		<div class="flex flex-col min-h-screen justify-center">
 			<div
 				class="i-mdi-alarm text-7xl max-w-5/6 mx-auto my-8 text-blue-600"
 			/>
@@ -465,10 +367,10 @@
 
 	<Slide>
 		<div
-			class="flex flex-col min-h-screen items-center justify-center w-7/10 mx-auto space-y-5"
+			class="flex flex-col min-h-screen items-center justify-center md:w-7/10 w-9/10 mx-auto space-y-5"
 		>
 			<div
-				class="flex md:flex-nowrap flex-wrap h-1/3 items-center space-x-5 border-b-1 border-gray-400 pb-10"
+				class="flex md:flex-nowrap flex-wrap h-1/3 items-center mr-5 border-b-1 border-gray-400 pb-10"
 			>
 				<img src="12.svg" alt="figure-1" class="w-70" />
 				<div class="flex flex-col">
@@ -492,7 +394,7 @@
 			</div>
 
 			<div
-				class="flex h-1/3 md:flex-nowrap flex-wrap-reverse items-center space-x-5 border-b-1 border-gray-400 pb-10"
+				class="flex h-1/3 md:flex-nowrap flex-wrap-reverse items-center mr-5 border-b-1 border-gray-400 pb-10"
 			>
 				<div class="flex flex-col">
 					<h2
@@ -515,7 +417,7 @@
 				<img src="14.svg" alt="figure-1" class="w-70" />
 			</div>
 			<div
-				class="flex h-1/3 md:flex-nowrap flex-wrap items-center space-x-5 pb-10"
+				class="flex h-1/3 md:flex-nowrap flex-wrap items-center mr-5 pb-10"
 			>
 				<img src="16.svg" alt="figure-1" class="w-70" />
 				<div class="flex flex-col">
