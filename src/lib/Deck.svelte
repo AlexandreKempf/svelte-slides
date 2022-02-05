@@ -51,14 +51,23 @@
 	}
 
 	function handleSwipe(event) {
-		$currentIndex =
-			event.detail.direction == "right"
-				? next($currentIndex, $slides.length)
-				: $currentIndex;
-		$currentIndex =
-			event.detail.direction == "left"
-				? previous($currentIndex)
-				: $currentIndex;
+		const numSlides = $slides.length;
+		const maxSteps = $slides[$currentIndex].maxSteps;
+		switch (event.key) {
+			case "left":
+				$currentIndex = previous($currentIndex);
+				$step = 0;
+				break;
+
+			case "right":
+				if ($step == maxSteps) {
+					$currentIndex = next($currentIndex, numSlides);
+					$step = 0;
+				} else {
+					$step = next($step, maxSteps + 1);
+				}
+				break;
+		}
 	}
 </script>
 
