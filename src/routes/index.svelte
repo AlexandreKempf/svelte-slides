@@ -386,36 +386,6 @@
 		</div>
 	</Slide>
 
-	<Slide maxSteps={1}>
-		<div class="flex flex-col min-h-screen justify-center">
-			<img
-				src="bg.jpg"
-				alt="background"
-				class="fixed object-cover w-screen h-screen"
-			/>
-			<div
-				class="absolute md:self-end lg:mr-1/8 m-5 sm:p-10 p-5 lg:w-1/3 md:w-1/2 bg-white rounded-lg relative shadow-md op90 animate__animated animate__slideInRight"
-			>
-				<p
-					class="font-sans font-bold text-sm text-blue-600 tracking-widest uppercase"
-				>
-					your tagline
-				</p>
-				<h1
-					class="font-sans font-black text-neutral-900 text-5xl text-left mt-8 tracking-tighter"
-				>
-					Medium length display headline.
-				</h1>
-				<p
-					class="font-sans font-light text-xl text-gray-500 mt-8 leading-relaxed"
-				>
-					Free and Premium themes, UI Kit's, templates and landing
-					pages built with Tailwind CSS, HTML & Next.js.
-				</p>
-			</div>
-		</div>
-	</Slide>
-
 	<Slide>
 		<div
 			class="flex flex-col min-h-screen items-center justify-center md:w-7/10 w-9/10 mx-auto"
@@ -489,6 +459,36 @@
 						>Read more about the offer >></a
 					>
 				</div>
+			</div>
+		</div>
+	</Slide>
+
+	<Slide maxSteps={1}>
+		<div class="flex flex-col min-h-screen justify-center">
+			<img
+				src="bg.jpg"
+				alt="background"
+				class="fixed object-cover w-screen h-screen"
+			/>
+			<div
+				class="absolute md:self-end lg:mr-1/8 m-5 sm:p-10 p-5 lg:w-1/3 md:w-1/2 bg-white rounded-lg relative shadow-md op90 animate__animated animate__slideInRight start-1:animate__hinge end-1:animate__slideInRight"
+			>
+				<p
+					class="font-sans font-bold text-sm text-blue-600 tracking-widest uppercase"
+				>
+					your tagline
+				</p>
+				<h1
+					class="font-sans font-black text-neutral-900 text-5xl text-left mt-8 tracking-tighter"
+				>
+					Medium length display headline.
+				</h1>
+				<p
+					class="font-sans font-light text-xl text-gray-500 mt-8 leading-relaxed"
+				>
+					Free and Premium themes, UI Kit's, templates and landing
+					pages built with Tailwind CSS, HTML & Next.js.
+				</p>
 			</div>
 		</div>
 	</Slide>

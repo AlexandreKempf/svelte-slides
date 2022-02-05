@@ -16,30 +16,73 @@
 
 	const updateClassAtStep = (container, step) => {
 		const children = container.getElementsByTagName("*");
-		const prefix_start = "start-" + step + ":";
-		const prefix_end = "end-" + step + ":";
+		const prefixStart = "start-" + step + ":";
+		const prefixEnd = "end-" + step + ":";
 		for (var i = 0; i < children.length; i++) {
 			const child = children[i];
-			const classList = child.classList;
+			const copyChild = child.cloneNode(true);
+			const classList = copyChild.classList;
 			for (var j = 0; j < classList.length; j++) {
-				if (classList[j].startsWith("start")) {
+				if (classList[j].startsWith("start-")) {
 					if (step == 0) {
-						//reset the slide to step-0 by removing all step-*: classes added
+						//reset the slide to step-0 by removing all start-*: classes added
 						const classToRemove = classList[j]
 							.split(":")
 							.slice(1)
 							.join("");
-						child.classList.remove(classToRemove);
-					} else if (classList[j].startsWith(prefix_start)) {
-						const classToUpdate = classList[j].replace(
-							prefix_start,
+						const stepStart = parseInt(
+							classList[j].split(":")[0].split("-")[1]
+						);
+						// check if the class is removed by an end earlier
+						const regex = new RegExp(
+							"end-[0-" + stepStart + "]:" + classToRemove
+						);
+						let isClassRemovedByAnEnd = false;
+						for (var k = 0; k < classList.length; k++) {
+							if (regex.test(classList[k])) {
+								isClassRemovedByAnEnd = true;
+							}
+						}
+						if (!isClassRemovedByAnEnd) {
+							child.classList.remove(classToRemove);
+						}
+					} else if (classList[j].startsWith(prefixStart)) {
+						const classToAdd = classList[j].replace(
+							prefixStart,
 							""
 						);
-						if (child.classList.contains(classToUpdate)) {
-							child.classList.remove(classToUpdate);
-						} else {
-							child.classList.add(classToUpdate);
+
+						child.classList.add(classToAdd);
+					}
+				} else if (classList[j].startsWith("end-")) {
+					if (step == 0) {
+						//reset the slide to step-0 by adding all end-*: classes removed
+						const classToAdd = classList[j]
+							.split(":")
+							.slice(1)
+							.join("");
+						const stepEnd = parseInt(
+							classList[j].split(":")[0].split("-")[1]
+						);
+						// check if the class is introduce by an earlier start
+						const regex = new RegExp(
+							"start-[0-" + stepEnd + "]:" + classToAdd
+						);
+						let isClassIntroduceByAStart = false;
+						for (var k = 0; k < classList.length; k++) {
+							if (regex.test(classList[k])) {
+								isClassIntroduceByAStart = true;
+							}
 						}
+						if (!isClassIntroduceByAStart) {
+							child.classList.add(classToAdd);
+						}
+					} else if (classList[j].startsWith(prefixEnd)) {
+						const classToRemove = classList[j].replace(
+							prefixEnd,
+							""
+						);
+						child.classList.remove(classToRemove);
 					}
 				}
 			}
