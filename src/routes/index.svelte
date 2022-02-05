@@ -1,6 +1,4 @@
 <script>
-	import "uno.css";
-	import "@unocss/reset/tailwind.css";
 	import Slide from "$lib/Slide.svelte";
 	import Deck from "$lib/Deck.svelte";
 </script>
@@ -9,7 +7,7 @@
 	<Slide>
 		<div class="flex flex-col min-h-screen justify-center">
 			<div
-				class="i-mdi-alarm text-7xl max-w-5/6 mx-auto my-8 text-blue-600"
+				class="i-openmoji-gem-stone animate__animated animate__flip text-9xl max-w-5/6 mx-auto my-8 text-blue-600"
 			/>
 			<h1
 				class="font-sans font-black text-neutral-900 text-center text-7xl tracking-tighter max-w-5/6 mx-auto my-8 leading-none"
@@ -35,6 +33,46 @@
 			class="flex flex-wrap justify-evenly items-center mx-auto max-w-22/24 pt-20"
 		>
 			<div class="lg:w-11/24 w-22/24">
+				<div class="animate__animated animate__fadeInLeft">
+					<img src="14.svg" alt="figure-1" class="rounded-20" />
+				</div>
+			</div>
+			<div class="lg:w-11/24 w-22/24">
+				<div class="animate__animated animate__fadeInUp">
+					<p
+						class="font-sans font-bold text-sm text-blue-600 tracking-widest uppercase"
+					>
+						your tagline
+					</p>
+					<h1
+						class="font-sans font-black text-neutral-900 text-5xl text-left mt-8 tracking-tighter"
+					>
+						Medium length display headline.
+					</h1>
+					<p
+						class="font-sans font-light text-xl text-gray-500 mt-8 leading-relaxed"
+					>
+						Free and Premium themes, UI Kit's, templates and landing
+						pages built with Tailwind CSS, HTML & Next.js.
+					</p>
+
+					<p
+						class="font-sans font-light text-xl text-gray-500 mt-8 leading-relaxed"
+					>
+						Ain't no sunshine when she's gone. <br />
+						Expensive feature away. <br />
+						Really good features.
+					</p>
+				</div>
+			</div>
+		</div>
+	</Slide>
+
+	<Slide>
+		<div
+			class="flex flex-wrap justify-evenly items-center mx-auto max-w-22/24 pt-20"
+		>
+			<div class="lg:w-11/24 w-22/24 mb-8">
 				<p
 					class="font-sans font-bold text-sm text-blue-600 tracking-widest uppercase"
 				>
@@ -61,12 +99,18 @@
 				</p>
 			</div>
 			<div class="lg:w-11/24 w-22/24">
-				<img src="14.svg" alt="figure-1" class="rounded-20" />
+				<lottie-player
+					src="https://assets9.lottiefiles.com/packages/lf20_rhnmhzwj.json"
+					background="transparent"
+					speed="1"
+					loop
+					autoplay
+				/>
 			</div>
 		</div>
 	</Slide>
 
-	<Slide>
+	<Slide maxSteps={4}>
 		<div class="flex flex-wrap justify-evenly mx-auto max-w-22/24 pt-20">
 			<div class="xl:w-11/24 w-22/24">
 				<p
@@ -98,7 +142,9 @@
 				<div
 					class="flex flex-wrap justify-evenly items-top mx-auto max-w-22/24"
 				>
-					<div class="w-23/24 md:w-11/24 py-10">
+					<div
+						class="w-23/24 md:w-11/24 py-10 animate__animated op0 step-1:op100 step-1:animate__fadeInRight"
+					>
 						<div class="i-openmoji-scarf text-5xl" />
 						<h2
 							class="font-sans font-semibold text-neutral-900 mt-6 text-2xl tracking-tighter leading-none"
@@ -111,7 +157,9 @@
 							Explain two of the best features you saw in Madrid
 						</p>
 					</div>
-					<div class="w-23/24 md:w-11/24 py-10">
+					<div
+						class="w-23/24 md:w-11/24 py-10 animate__animated op0 step-2:op100 step-2:animate__fadeInRight"
+					>
 						<div class="i-openmoji-rocket text-5xl" />
 						<h2
 							class="font-sans font-semibold text-neutral-900 mt-6 text-2xl tracking-tighter leading-none"
@@ -126,7 +174,9 @@
 							Explain two of the best features you saw in Madrid
 						</p>
 					</div>
-					<div class="w-23/24 md:w-11/24 py-10">
+					<div
+						class="w-23/24 md:w-11/24 py-10 animate__animated op0 step-3:op100 step-3:animate__fadeInRight"
+					>
 						<div class="i-openmoji-bullseye text-5xl" />
 						<h2
 							class="font-sans font-semibold text-neutral-900 mt-6 text-2xl tracking-tighter leading-none"
@@ -139,7 +189,9 @@
 							Explain two of the best features you saw in Madrid
 						</p>
 					</div>
-					<div class="w-23/24 md:w-11/24 py-10">
+					<div
+						class="w-23/24 md:w-11/24 py-10 animate__animated op0 step-4:op100 step-4:animate__fadeInRight"
+					>
 						<div class="i-openmoji-telephone text-5xl" />
 						<h2
 							class="font-sans font-semibold text-neutral-900 mt-6 text-2xl tracking-tighter leading-none"
@@ -261,7 +313,7 @@
 				<div
 					class="xl:w-11/36 md:w-8/18 border border-gray-200 p-6 m-4 ml-0 rounded-lg shadow-md"
 				>
-					<div class="i-openmoji-shower text-5xl" />
+					<div class="i-openmoji-text-5xl" />
 					<h2
 						class="font-sans font-semibold text-neutral-900 mt-6 text-2xl tracking-tighter leading-none"
 					>
