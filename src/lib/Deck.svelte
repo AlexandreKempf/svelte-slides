@@ -18,6 +18,8 @@
 	let slides = getContext("slides");
 	let step = getContext("step");
 
+	let yScroll;
+
 	const previous = (index) => Math.max(index - 1, 0);
 	const next = (index, numElem) => Math.min(index + 1, numElem - 1);
 	function handleKeydown(event) {
@@ -88,9 +90,14 @@
 			}
 		}
 	}
+
+	$: {
+		yScroll = 0;
+		$currentIndex;
+	}
 </script>
 
-<svelte:window on:keydown={handleKeydown} />
+<svelte:window on:keydown={handleKeydown} bind:scrollY={yScroll} />
 
 <div
 	class="min-w-full-screen min-h-screen"
