@@ -4,7 +4,7 @@
 	import "@unocss/reset/tailwind.css";
 	import { setContext, getContext } from "svelte";
 	import { writable } from "svelte/store";
-	import { swipe } from "svelte-gestures";
+	import { tap } from "svelte-gestures";
 
 	let slidesStore = writable([]);
 	let currentIndexStore = writable(0);
@@ -69,13 +69,33 @@
 				break;
 		}
 	}
+
+	function handleTap(event) {
+		const numSlides = $slides.length;
+		const maxSteps = $slides[$currentIndex].maxSteps;
+		const SlideWidth = event.detail.target.offsetWidth;
+		const xTap = event.detail.x;
+
+		if (xTap < SlideWidth / 3) {
+			$currentIndex = previous($currentIndex);
+			$step = 0;
+		} else if (xTap > (2 * SlideWidth) / 3) {
+			if ($step == maxSteps) {
+				$currentIndex = next($currentIndex, numSlides);
+				$step = 0;
+			} else {
+				$step = next($step, maxSteps + 1);
+			}
+		}
+	}
 </script>
 
 <svelte:window on:keydown={handleKeydown} />
+
 <div
 	class="min-w-full-screen min-h-screen"
-	use:swipe={{ timeframe: 500, minSwipeDistance: 100, touchAction: "pan-y" }}
-	on:swipe={handleSwipe}
+	use:tap={{ timeframe: 500 }}
+	on:tap={handleTap}
 >
 	<slot />
 </div>
