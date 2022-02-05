@@ -421,7 +421,7 @@
 			class="flex flex-col min-h-screen items-center justify-center md:w-7/10 w-9/10 mx-auto space-y-5"
 		>
 			<div
-				class="flex md:flex-nowrap flex-wrap h-1/3 items-center mr-5 border-b-1 border-gray-400 pb-10"
+				class="flex md:flex-nowrap flex-wrap h-1/3 items-center mr-5 border-b-1 border-gray-400 pb-10 animate__animated animate__slideInRight animate__slow"
 			>
 				<img src="12.svg" alt="figure-1" class="w-70" />
 				<div class="flex flex-col">
@@ -445,7 +445,7 @@
 			</div>
 
 			<div
-				class="flex h-1/3 md:flex-nowrap flex-wrap-reverse items-center mr-5 border-b-1 border-gray-400 pb-10"
+				class="flex h-1/3 md:flex-nowrap flex-wrap-reverse items-center mr-5 border-b-1 border-gray-400 pb-10 animate__animated animate__slideInLeft animate__slow"
 			>
 				<div class="flex flex-col">
 					<h2
@@ -468,7 +468,7 @@
 				<img src="14.svg" alt="figure-1" class="w-70" />
 			</div>
 			<div
-				class="flex h-1/3 md:flex-nowrap flex-wrap items-center mr-5 pb-10"
+				class="flex h-1/3 md:flex-nowrap flex-wrap items-center mr-5 pb-10 animate__animated animate__slideInRight animate__slow"
 			>
 				<img src="16.svg" alt="figure-1" class="w-70" />
 				<div class="flex flex-col">

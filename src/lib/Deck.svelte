@@ -92,6 +92,7 @@
 	}
 
 	$: {
+		// reset yScroll on slide change
 		yScroll = 0;
 		$currentIndex;
 	}
