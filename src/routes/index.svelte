@@ -418,12 +418,12 @@
 
 	<Slide>
 		<div
-			class="flex flex-col min-h-screen items-center justify-center md:w-7/10 w-9/10 mx-auto space-y-5"
+			class="flex flex-col min-h-screen items-center justify-center md:w-7/10 w-9/10 mx-auto"
 		>
 			<div
-				class="flex md:flex-nowrap flex-wrap h-1/3 items-center mr-5 border-b-1 border-gray-400 pb-10 animate__animated animate__slideInRight animate__slow"
+				class="flex md:flex-nowrap flex-wrap h-1/3 items-center mr-5 mb-5 border-b-1 border-gray-400 pb-10 animate__animated animate__slideInRight animate__slow"
 			>
-				<img src="12.svg" alt="figure-1" class="w-70" />
+				<img src="12.svg" alt="figure-1" class="w-70 mx-auto" />
 				<div class="flex flex-col">
 					<h2
 						class="font-sans font-semibold text-neutral-900 mt-6 text-2xl tracking-tighter leading-none"
@@ -445,7 +445,7 @@
 			</div>
 
 			<div
-				class="flex h-1/3 md:flex-nowrap flex-wrap-reverse items-center mr-5 border-b-1 border-gray-400 pb-10 animate__animated animate__slideInLeft animate__slow"
+				class="flex h-1/3 md:flex-nowrap flex-wrap-reverse items-center mr-5 mb-5 border-b-1 border-gray-400 pb-10 animate__animated animate__slideInLeft animate__slow"
 			>
 				<div class="flex flex-col">
 					<h2
@@ -465,12 +465,12 @@
 						>Read more about the offer >></a
 					>
 				</div>
-				<img src="14.svg" alt="figure-1" class="w-70" />
+				<img src="14.svg" alt="figure-1" class="w-70 mx-auto" />
 			</div>
 			<div
-				class="flex h-1/3 md:flex-nowrap flex-wrap items-center mr-5 pb-10 animate__animated animate__slideInRight animate__slow"
+				class="flex h-1/3 md:flex-nowrap flex-wrap items-center mr-5 mb-5 pb-10 animate__animated animate__slideInRight animate__slow"
 			>
-				<img src="16.svg" alt="figure-1" class="w-70" />
+				<img src="16.svg" alt="figure-1" class="w-70 mx-auto" />
 				<div class="flex flex-col">
 					<h2
 						class="font-sans font-semibold text-neutral-900 mt-6 text-2xl tracking-tighter leading-none"
