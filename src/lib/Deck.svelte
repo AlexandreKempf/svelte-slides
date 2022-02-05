@@ -9,14 +9,17 @@
 	let slidesStore = writable([]);
 	let currentIndexStore = writable(0);
 	let stepStore = writable(0);
+	let maxStepsStore = writable(0);
 
 	setContext("slides", slidesStore);
 	setContext("currentIndex", currentIndexStore);
 	setContext("step", stepStore);
+	setContext("maxSteps", maxStepsStore);
 
 	let currentIndex = getContext("currentIndex");
 	let slides = getContext("slides");
 	let step = getContext("step");
+	let maxSteps = getContext("maxSteps");
 
 	let yScroll;
 
@@ -24,7 +27,6 @@
 	const next = (index, numElem) => Math.min(index + 1, numElem - 1);
 	function handleKeydown(event) {
 		const numSlides = $slides.length;
-		const maxSteps = $slides[$currentIndex].maxSteps;
 
 		switch (event.key) {
 			case "ArrowLeft":
@@ -33,11 +35,11 @@
 				break;
 
 			case "ArrowRight":
-				if ($step == maxSteps) {
+				if ($step == $maxSteps) {
 					$currentIndex = next($currentIndex, numSlides);
 					$step = 0;
 				} else {
-					$step = next($step, maxSteps + 1);
+					$step = next($step, $maxSteps + 1);
 				}
 				break;
 
@@ -46,35 +48,13 @@
 				break;
 
 			case "ArrowDown":
-				$step = next($step, maxSteps + 1);
-				break;
-		}
-	}
-
-	function handleSwipe(event) {
-		const numSlides = $slides.length;
-		const maxSteps = $slides[$currentIndex].maxSteps;
-
-		switch (event.detail.direction) {
-			case "right":
-				$currentIndex = previous($currentIndex);
-				$step = 0;
-				break;
-
-			case "left":
-				if ($step == maxSteps) {
-					$currentIndex = next($currentIndex, numSlides);
-					$step = 0;
-				} else {
-					$step = next($step, maxSteps + 1);
-				}
+				$step = next($step, $maxSteps + 1);
 				break;
 		}
 	}
 
 	function handleTap(event) {
 		const numSlides = $slides.length;
-		const maxSteps = $slides[$currentIndex].maxSteps;
 		const SlideWidth = event.detail.target.offsetWidth;
 		const xTap = event.detail.x;
 
@@ -82,11 +62,11 @@
 			$currentIndex = previous($currentIndex);
 			$step = 0;
 		} else if (xTap > (2 * SlideWidth) / 3) {
-			if ($step == maxSteps) {
+			if ($step == $maxSteps) {
 				$currentIndex = next($currentIndex, numSlides);
 				$step = 0;
 			} else {
-				$step = next($step, maxSteps + 1);
+				$step = next($step, $maxSteps + 1);
 			}
 		}
 	}

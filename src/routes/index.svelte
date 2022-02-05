@@ -108,7 +108,7 @@
 		</div>
 	</Slide>
 
-	<Slide maxSteps={4}>
+	<Slide>
 		<div class="flex flex-wrap justify-evenly mx-auto max-w-22/24 pt-20">
 			<div class="xl:w-11/24 w-22/24">
 				<p
@@ -207,7 +207,7 @@
 		</div>
 	</Slide>
 
-	<Slide maxSteps={6}>
+	<Slide>
 		<div class="flex flex-col min-h-screen pt-15 ml-8">
 			<p
 				class="font-sans font-bold text-sm text-blue-600 tracking-widest uppercase"
@@ -463,7 +463,7 @@
 		</div>
 	</Slide>
 
-	<Slide maxSteps={1}>
+	<Slide>
 		<div class="flex flex-col min-h-screen justify-center">
 			<img
 				src="bg.jpg"

@@ -1,13 +1,13 @@
 <script>
 	import { getContext } from "svelte";
 
-	export let maxSteps = 0;
 	// Fill the context store when we add a slide
 	let slides = getContext("slides");
 	let currentIndex = getContext("currentIndex");
+	let maxSteps = getContext("maxSteps");
 	let step = getContext("step");
 	let slideIndex = $slides.length;
-	$slides = [...$slides, { idx: slideIndex, maxSteps: maxSteps }];
+	$slides = [...$slides, { idx: slideIndex }];
 
 	// Only display the current slide
 	$: hidden = $currentIndex != slideIndex;
@@ -15,6 +15,9 @@
 	let Slide;
 
 	const updateClassAtStep = (container, step) => {
+		// reset the maxSteps for each slide
+		$maxSteps = step == 0 ? 0 : $maxSteps;
+
 		const children = container.getElementsByTagName("*");
 		const prefixStart = "start-" + step + ":";
 		const prefixEnd = "end-" + step + ":";
@@ -33,6 +36,9 @@
 						const stepStart = parseInt(
 							classList[j].split(":")[0].split("-")[1]
 						);
+						// determine the maxSteps for each slide
+						$maxSteps =
+							stepStart > $maxSteps ? stepStart : $maxSteps;
 						// check if the class is removed by an end earlier
 						const regex = new RegExp(
 							"end-[0-" + stepStart + "]:" + classToRemove
@@ -64,6 +70,9 @@
 						const stepEnd = parseInt(
 							classList[j].split(":")[0].split("-")[1]
 						);
+						// determine the maxSteps for each slide
+						$maxSteps = stepEnd > $maxSteps ? stepEnd : $maxSteps;
+
 						// check if the class is introduce by an earlier start
 						const regex = new RegExp(
 							"start-[0-" + stepEnd + "]:" + classToAdd
