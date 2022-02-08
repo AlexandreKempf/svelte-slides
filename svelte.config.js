@@ -6,6 +6,7 @@ import presetIcons from '@unocss/preset-icons'
 import presetAttributify from '@unocss/preset-attributify'
 import presetUno from '@unocss/preset-uno'
 import presetWebFonts from '@unocss/preset-web-fonts'
+import { isoImport } from 'vite-plugin-iso-import'
 
 const config = {
   preprocess: preprocess(),
@@ -15,6 +16,7 @@ const config = {
     target: '#svelte',
     vite: {
       plugins: [
+        isoImport(),
         UnoCss({
           extractors: [extractorSvelte],
           shortcuts: {},

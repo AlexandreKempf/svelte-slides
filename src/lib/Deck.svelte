@@ -9,17 +9,20 @@
 	let slidesStore = writable([]);
 	let currentIndexStore = writable(0);
 	let stepStore = writable(0);
+	let vizzuStepStore = writable(0);
 	let maxStepsStore = writable(0);
 
 	setContext("slides", slidesStore);
 	setContext("currentIndex", currentIndexStore);
 	setContext("step", stepStore);
 	setContext("maxSteps", maxStepsStore);
+	setContext("vizzuStep", vizzuStepStore);
 
 	let currentIndex = getContext("currentIndex");
 	let slides = getContext("slides");
 	let step = getContext("step");
 	let maxSteps = getContext("maxSteps");
+	let vizzuStep = getContext("vizzuStep");
 
 	let yScroll;
 
@@ -32,12 +35,14 @@
 			case "ArrowLeft":
 				$currentIndex = previous($currentIndex);
 				$step = 0;
+				// $vizzuStep = 0;
 				break;
 
 			case "ArrowRight":
 				if ($step == $maxSteps) {
 					$currentIndex = next($currentIndex, numSlides);
 					$step = 0;
+					// $vizzuStep = 0;
 				} else {
 					$step = next($step, $maxSteps + 1);
 				}
@@ -61,10 +66,12 @@
 		if (xTap < ScreenWidth / 4) {
 			$currentIndex = previous($currentIndex);
 			$step = 0;
+			// $vizzuStep = 0;
 		} else if (xTap > (3 * ScreenWidth) / 4) {
 			if ($step == $maxSteps) {
 				$currentIndex = next($currentIndex, numSlides);
 				$step = 0;
+				// $vizzuStep = 0;
 			} else {
 				$step = next($step, $maxSteps + 1);
 			}

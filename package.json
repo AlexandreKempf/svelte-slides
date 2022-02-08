@@ -20,7 +20,8 @@
     "eslint-plugin-svelte3": "^3.2.1",
     "prettier": "^2.4.1",
     "prettier-plugin-svelte": "^2.4.0",
-    "svelte": "^3.44.0"
+    "svelte": "^3.44.0",
+    "vite-plugin-iso-import": "^0.1.3"
   },
   "type": "module",
   "dependencies": {
@@ -30,6 +31,7 @@
     "cookie": "^0.4.1",
     "svelte-gestures": "^1.4.1",
     "svelte-preprocess": "^4.10.2",
-    "unocss": "^0.22.7"
+    "unocss": "^0.22.7",
+    "vizzu": "^0.4.3"
   }
 }

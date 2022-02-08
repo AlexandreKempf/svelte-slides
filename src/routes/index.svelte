@@ -1,6 +1,8 @@
 <script>
 	import Slide from "$lib/Slide.svelte";
 	import Deck from "$lib/Deck.svelte";
+	import Vizzu from "$lib/Vizzu.svelte";
+	import { data } from "https://lib.vizzuhq.com/test/integration/test_data/infinite_data.js?client";
 </script>
 
 <Deck>
@@ -587,6 +589,164 @@
 						Blue Bottle Crucifix
 					</h2>
 				</div>
+			</div>
+		</div>
+	</Slide>
+
+	<Slide>
+		<div
+			class="flex flex-wrap justify-evenly items-center mx-auto max-w-22/24 pt-20"
+		>
+			<div
+				class="lg:w-11/24 w-22/24 animate__animated animate__fadeInLeft"
+			>
+				<Vizzu
+					options={[
+						(chart) =>
+							chart.animate({
+								data: data,
+								config: {
+									channels: {
+										x: { set: ["Value 1", "Joy factors"] },
+										color: { set: ["Joy factors"] },
+										label: { set: ["Value 1"] },
+									},
+									coordSystem: "polar",
+									legend: null,
+								},
+								style: {
+									logo: { width: 0 },
+									plot: {
+										marker: {
+											label: {
+												fontSize: 13,
+												orientation: "tangential",
+												angle: 4.7,
+											},
+										},
+										xAxis: {
+											title: { color: "#ffffff00" },
+											label: { color: "#ffffff00" },
+											ticks: { color: "#ffffff00" },
+											interlacing: { color: "#ffffff00" },
+										},
+										yAxis: {
+											color: "#ffffff00",
+											title: { color: "#ffffff00" },
+											label: { color: "#ffffff00" },
+											ticks: { color: "#ffffff00" },
+										},
+									},
+								},
+							}),
+						(chart) => {
+							chart.animate(
+								{
+									config: {
+										channels: {
+											x: {
+												set: [
+													"Value 1",
+													"Joy factors",
+													"Region",
+													"Country code",
+												],
+											},
+											label: { set: null },
+										},
+									},
+								},
+								"500ms"
+							);
+							chart.animate({
+								config: {
+									channels: {
+										x: {
+											set: [
+												"Value 1",
+												"Joy factors",
+												"Region",
+												"Country code",
+											],
+										},
+										y: {
+											set: ["Value 3"],
+											/* Setting the radius of the empty circle
+                in the centre. */
+											range: { min: "-60%" },
+										},
+									},
+								},
+								style: {
+									plot: {
+										marker: {
+											borderWidth: 0,
+											borderOpacity: 1,
+										},
+									},
+								},
+							});
+						},
+						(chart) =>
+							chart.animate({
+								config: {
+									channels: {
+										x: {
+											set: [
+												"Joy factors",
+												"Region",
+												"Country code",
+												"Value 1",
+											],
+										},
+										color: { set: ["Joy factors"] },
+									},
+									coordSystem: "cartesian",
+									legend: null,
+								},
+							}),
+						(chart) =>
+							chart.animate({
+								config: {
+									channels: {
+										x: {
+											set: ["Joy factors", "Value 1"],
+										},
+										color: { set: ["Joy factors"] },
+										label: { set: ["Value 1"] },
+									},
+									coordSystem: "cartesian",
+									legend: null,
+								},
+							}),
+					]}
+				/>
+			</div>
+			<div class="lg:w-11/24 w-22/24 animate__animated animate__fadeInUp">
+				<p
+					class="font-sans font-bold text-sm text-blue-600 tracking-widest uppercase"
+				>
+					your tagline
+				</p>
+				<h1
+					class="font-sans font-black text-neutral-900 text-5xl text-left mt-8 tracking-tighter"
+				>
+					Try clicking on the graph to see transitions
+				</h1>
+				<p
+					class="font-sans font-light text-xl text-gray-500 mt-8 leading-relaxed"
+				>
+					Free and Premium themes, UI Kit's, templates and landing
+					pages built with Tailwind CSS, HTML & Next.js.
+				</p>
+
+				<p
+					class="font-sans font-light text-xl text-gray-500 mt-8 leading-relaxed"
+				>
+					Ain't no sunshine when she's gone. <br />
+					Expensive feature away. <br />
+					Really good features.
+				</p>
 			</div>
 		</div>
 	</Slide>
