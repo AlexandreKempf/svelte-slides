@@ -53,15 +53,15 @@
 		}
 	}
 
+	let ScreenWidth;
 	function handleTap(event) {
 		const numSlides = $slides.length;
-		const SlideWidth = event.detail.target.offsetWidth;
 		const xTap = event.detail.x;
 
-		if (xTap < SlideWidth / 3) {
+		if (xTap < ScreenWidth / 4) {
 			$currentIndex = previous($currentIndex);
 			$step = 0;
-		} else if (xTap > (2 * SlideWidth) / 3) {
+		} else if (xTap > (3 * ScreenWidth) / 4) {
 			if ($step == $maxSteps) {
 				$currentIndex = next($currentIndex, numSlides);
 				$step = 0;
@@ -84,6 +84,7 @@
 	class="min-w-full-screen min-h-screen"
 	use:tap={{ timeframe: 500 }}
 	on:tap={handleTap}
+	bind:clientWidth={ScreenWidth}
 >
 	<slot />
 </div>
