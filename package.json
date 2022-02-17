@@ -9,6 +9,7 @@
     "preview": "svelte-kit preview"
   },
   "devDependencies": {
+    "@iconify-json/akar-icons": "^1.1.0",
     "@iconify-json/mdi": "^1.0.16",
     "@iconify-json/openmoji": "^1.0.5",
     "@iconify-json/twemoji": "^1.0.2",

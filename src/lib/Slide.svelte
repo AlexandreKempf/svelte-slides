@@ -101,6 +101,10 @@
 	$: Slide && $currentIndex == slideIndex && updateClassAtStep(Slide, $step); // update class at a specific step or reset if step==0
 </script>
 
-<div class:hidden bind:this={Slide} class="overflow-x-hidden">
+<div
+	class:hidden
+	bind:this={Slide}
+	class="overflow-x-hidden lg:overflow-y-hidden"
+>
 	<slot />
 </div>
