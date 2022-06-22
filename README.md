@@ -22,6 +22,8 @@ npm init svelte@next my-app
 
 > Note: the `@next` is temporary
 
+Need node.js>16.7
+
 ## Developing
 
 Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
