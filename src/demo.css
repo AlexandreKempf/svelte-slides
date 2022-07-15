@@ -1,0 +1,221 @@
+kbd {
+    border: 0.1em solid #aaa;
+    border-radius: 15%;
+    display: inline-block;
+    padding: 0.1em 0.5em;
+    background: linear-gradient(180deg, #fff, #fff, #fff, #ddd);
+    user-select: none;
+    cursor: pointer;
+    color: #000;
+    font-weight: bold;
+}
+kbd:hover {
+    background: linear-gradient(0deg, #fff, #fff, #fff, #ddd);
+}
+
+.thought {
+    display: flex;
+    background-color: #9ca3af;
+    padding: 20px;
+    border-radius: 30px;
+    min-width: 40px;
+    max-width: 220px;
+    min-height: 40px;
+    margin: 20px;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-weight: 300;
+    margin-top: 1rem;
+    line-height: 1.625;
+
+}
+.thought:before,
+.thought:after {
+    content: '';
+    background-color: #9ca3af;
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    z-index: -1;
+}
+.thought:before {
+    width: 44px;
+    height: 44px;
+    top: -12px;
+    left: 28px;
+    box-shadow: -50px 30px 0 -12px #9ca3af;
+}
+.thought:after {
+    bottom: -10px;
+    right: 26px;
+    width: 30px;
+    height: 30px;
+    box-shadow: 40px -34px 0 0 #9ca3af, -28px -6px 0 -2px #9ca3af, -24px 17px 0 -6px #9ca3af, -5px 25px 0 -10px #9ca3af;
+}
+
+.label {
+    font-weight: 700;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    color: rgba(37, 99, 235, 1);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+h1 {
+    font-weight: 900;
+    color: rgba(23, 23, 23, 1);
+    font-size: 3rem;
+    line-height: 1;
+    margin-top: 2rem;
+    letter-spacing: -0.05em;
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue',
+        Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
+h2 {
+    font-weight: 600;
+    color: rgba(23, 23, 23, 1);
+    margin-top: 1.5rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    letter-spacing: -0.05em;
+    line-height: 1;
+}
+.slide-bar {
+    width: 91.6666666667%;
+    margin-bottom: 2rem;
+    margin-right: 1.25rem;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-color: rgba(156, 163, 175, 1);
+    width: -webkit-fill-available;
+}
+@media (min-width: 1024px) {
+    .slide-bar {
+        width: 62.5%;
+    }
+}
+.slide-bar.h1 {
+    text-align: left;
+}
+.major {
+    font-weight: 350;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    color: rgba(107, 114, 128, 1);
+    margin-top: 2rem;
+    line-height: 1.625;
+}
+.minor {
+    font-weight: 250;
+    color: rgba(107, 114, 128, 1);
+    margin-top: 1rem;
+    line-height: 1.625;
+}
+.card {
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(229, 231, 235, 1);
+    padding: 1.5rem;
+    margin: 1rem;
+    margin-left: 0rem;
+    border-radius: 0.5rem;
+    box-shadow: -1px, -1px, inset 0 4px 6px -1px rgba(0, 0, 0, 0.1), inset 0 2px 4px -2px v rgba(0, 0, 0, 0.1);
+}
+@media (min-width: 1024px) {
+    .card {
+        width: 30.5555555556%;
+    }
+}
+@media (min-width: 768px) {
+    .card {
+        width: 44.4444444444%;
+    }
+}
+a{
+    color: rgba(37, 99, 235,1);
+}
+a:hover {
+    color: rgba(82, 82, 82, 1);
+  }
+.large{
+font-size: 1.125rem;
+line-height: 1.75rem;
+margin-top: 2rem;
+line-height: 1.625;
+font-weight: 600;
+}
+.m-auto{
+margin-left: auto;
+margin-right: auto;
+}
+.flex-col{
+    display: flex;
+    flex-direction: column;
+}
+.flex-row{
+    display: flex;
+    flex-direction: row;
+}
+.main{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    max-width: 91.6666666667%;
+    padding-top: 5rem;
+    height:50%;
+}
+.rounded-20 {
+    border-radius: 5rem;}
+
+.box{
+    max-width: 91.6666666667%;
+}
+@media (min-width: 1024px) {
+    .box {
+      width: 45.8333333333%;
+    }
+  }
+  .major-box{
+    width: 95.8333333333%;;
+}
+@media (min-width: 1024px) {
+    .major-box {
+      width: 45.8333333333%;
+    }
+  }
+  .text-left {
+    text-align: left;
+  }
+.marker{
+    display: flex;
+    width: 83.3333333333%;
+    align-items: center;
+    background-color: rgba(243, 244, 246,1);
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+    border-radius: 0.5rem;
+    margin-right:0.75rem;
+    margin-left:0.75rem;
+    margin-top:0px;
+    margin-bottom:0;
+    padding: 1.25rem;
+    margin: 0.75rem;
+    text-align: center;
+    
+
+}
+@media (min-width: 768px) {
+    .marker {
+      width: 33.3333333333%;
+    }
+  }
+
+marker:before, :after {
+    box-sizing: border-box;
+    border-width: 0;
+    border-style: solid;
+    border-color: currentColor;
+}
