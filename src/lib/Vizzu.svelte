@@ -1,13 +1,13 @@
 <script>
-	import Vizzu from "https://cdn.jsdelivr.net/npm/vizzu@latest/dist/vizzu.min.js?client";
-	import { onMount } from "svelte";
-	import { tap } from "svelte-gestures";
-	import { getContext } from "svelte";
+	import Vizzu from 'https://cdn.jsdelivr.net/npm/vizzu@latest/dist/vizzu.min.js?client';
+	import { onMount } from 'svelte';
+	import { tap } from 'svelte-gestures';
+	import { getContext } from 'svelte';
 
-	export let id = "figure_1";
+	export let id = 'figure_1';
 	export let options = [];
 
-	let vizzuStep = getContext("vizzuStep");
+	let vizzuStep = getContext('vizzuStep');
 
 	let Chart;
 	onMount(() => {

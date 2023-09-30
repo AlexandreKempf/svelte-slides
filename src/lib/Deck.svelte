@@ -1,10 +1,9 @@
 <script>
-	import "unocss";
-	import "animate.css";
-	import "@unocss/reset/tailwind.css";
-	import { setContext, getContext } from "svelte";
-	import { writable } from "svelte/store";
-	import { tap } from "svelte-gestures";
+	import 'animate.css';
+	import '@unocss/reset/tailwind.css';
+	import { setContext, getContext } from 'svelte';
+	import { writable } from 'svelte/store';
+	import { tap } from 'svelte-gestures';
 
 	let slidesStore = writable([]);
 	let currentIndexStore = writable(0);
@@ -12,17 +11,17 @@
 	let vizzuStepStore = writable(0);
 	let maxStepsStore = writable(0);
 
-	setContext("slides", slidesStore);
-	setContext("currentIndex", currentIndexStore);
-	setContext("step", stepStore);
-	setContext("maxSteps", maxStepsStore);
-	setContext("vizzuStep", vizzuStepStore);
+	setContext('slides', slidesStore);
+	setContext('currentIndex', currentIndexStore);
+	setContext('step', stepStore);
+	setContext('maxSteps', maxStepsStore);
+	setContext('vizzuStep', vizzuStepStore);
 
-	let currentIndex = getContext("currentIndex");
-	let slides = getContext("slides");
-	let step = getContext("step");
-	let maxSteps = getContext("maxSteps");
-	let vizzuStep = getContext("vizzuStep");
+	let currentIndex = getContext('currentIndex');
+	let slides = getContext('slides');
+	let step = getContext('step');
+	let maxSteps = getContext('maxSteps');
+	let vizzuStep = getContext('vizzuStep');
 
 	let yScroll;
 
@@ -32,13 +31,13 @@
 		const numSlides = $slides.length;
 
 		switch (event.key) {
-			case "ArrowLeft":
+			case 'ArrowLeft':
 				$currentIndex = previous($currentIndex);
 				$step = 0;
 				// $vizzuStep = 0;
 				break;
 
-			case "ArrowRight":
+			case 'ArrowRight':
 				if ($step == $maxSteps) {
 					$currentIndex = next($currentIndex, numSlides);
 					$step = 0;
@@ -48,11 +47,11 @@
 				}
 				break;
 
-			case "ArrowUp":
+			case 'ArrowUp':
 				$step = previous($step);
 				break;
 
-			case "ArrowDown":
+			case 'ArrowDown':
 				$step = next($step, $maxSteps + 1);
 				break;
 		}
