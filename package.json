@@ -40,7 +40,6 @@
 		"@unocss/reset": "^0.56.4",
 		"animate.css": "^4.1.1",
 		"cookie": "^0.4.2",
-		"node": "18.0",
 		"svelte-animated-headline": "^1.0.7",
 		"svelte-gestures": "^1.5.2",
 		"svelte-kit": "^1.2.0",
