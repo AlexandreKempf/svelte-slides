@@ -34,7 +34,10 @@
 			<a
 				href="https://github.com/AlexandreKempf/svelte-slides"
 				class="font-sans text-center text-lg max-w-4/6 mx-auto mt-8 leading-relaxed font-semibold text-blue-600 hover:text-neutral-600"
-				> Check the github <span class="i-akar-icons-github-fill -mt-0.5"/>
+			>
+				Check the github <span
+					class="i-akar-icons-github-fill -mt-0.5"
+				/>
 			</a>
 
 			<p
@@ -150,7 +153,7 @@
 				<p
 					class="font-sans font-light text-xl text-gray-500 mt-8 leading-relaxed"
 				>
-					All you need is to add classes. <br/>
+					All you need is to add classes. <br />
 					Here is the recipe:
 				</p>
 			</div>
@@ -232,7 +235,6 @@
 		</div>
 	</Slide>
 
-
 	<Slide>
 		<div class="flex flex-col min-h-screen justify-center">
 			<img
@@ -256,12 +258,13 @@
 				<p
 					class="font-sans font-light text-xl text-gray-500 mt-8 leading-relaxed"
 				>
-					A picture is worth a thousand words. Illustrate your point with a background image. Then place whatever you want on top of it.
+					A picture is worth a thousand words. Illustrate your point
+					with a background image. Then place whatever you want on top
+					of it.
 				</p>
 			</div>
 		</div>
 	</Slide>
-
 
 	<Slide>
 		<div
@@ -340,7 +343,9 @@
 											],
 										},
 										y: {
-											set: ["Value 3"], /* Setting the radius of the empty circlein the centre. */
+											set: [
+												"Value 3",
+											] /* Setting the radius of the empty circlein the centre. */,
 											range: { min: "-60%" },
 										},
 									},
@@ -405,23 +410,24 @@
 					class="font-sans font-light text-xl text-gray-500 mt-8 leading-relaxed"
 				>
 					Supports <a
-					href="https://vizzuhq.com/"
-					class="text-blue-600 hover:text-neutral-600">Vizzu</a> charts. <br />
-					Click on the chart several times to trigger the animations  <br />
+						href="https://vizzuhq.com/"
+						class="text-blue-600 hover:text-neutral-600">Vizzu</a
+					>
+					charts. <br />
+					Click on the chart several times to trigger the animations
 					<br />
-					Unfortunately we cannot undo the animations yet. I'm working on it 😉
+					<br />
+					Unfortunately we cannot undo the animations yet. I'm working
+					on it 😉
 				</p>
-
 			</div>
 		</div>
 	</Slide>
 
 	<Slide>
-		<div
-			class="flex flex-col min-h-screen items-center justify-center md:w-7/10 w-9/10 mx-auto"
-		>
+		<div class="flex flex-col items-center justify-center mx-auto">
 			<div
-				class="flex md:flex-nowrap flex-wrap md:w-7/10 w-9/10 h-1/3 items-center mr-5 mb-5 border-b-1 border-gray-400 pb-10 animate__animated animate__slideInRight animate__slow"
+				class="flex flex-nowrap w-7/10 h-1/4 items-center mr-5 mb-5 border-b-1 border-gray-400 pb-10"
 			>
 				<img src="12.svg" alt="figure-1" class="w-70 mx-auto" />
 				<div class="flex flex-col">
@@ -433,8 +439,9 @@
 					<p
 						class="font-sans font-normal text-lg text-gray-500 mt-8 leading-relaxed"
 					>
-						`Deck` and `Slide` are the main components. 
-						More components will come to support charts and visualization tools
+						`Deck` and `Slide` are the main components. More
+						components will come to support charts and visualization
+						tools
 					</p>
 					<a
 						href="https://github.com/AlexandreKempf/svelte-slides"
@@ -479,7 +486,8 @@
 					<p
 						class="font-sans font-normal text-lg text-gray-500 mt-8 leading-relaxed"
 					>
-					Display your presentations on mobile or tablet. It is completely useless, but nice to have.
+						Display your presentations on mobile or tablet. It is
+						completely useless, but nice to have.
 					</p>
 					<a
 						href="https://github.com/AlexandreKempf/svelte-slides"
@@ -671,7 +679,8 @@
 			<p
 				class="font-sans font-normal text-center text-lg text-gray-500 max-w-4/6 mx-auto mt-8 leading-relaxed"
 			>
-				Brief list of features that could be nice to have or that is already included:
+				Brief list of features that could be nice to have or that is
+				already included:
 			</p>
 			<div class="flex flex-wrap justify-center mt-8">
 				<div
@@ -757,5 +766,4 @@
 			</div>
 		</div>
 	</Slide>
-
 </Deck>
