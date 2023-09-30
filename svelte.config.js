@@ -1,46 +1,18 @@
-import adapter from '@sveltejs/adapter-auto'
-import preprocess from 'svelte-preprocess'
-import UnoCss from 'unocss/vite'
-import { extractorSvelte } from '@unocss/core'
-import presetIcons from '@unocss/preset-icons'
-import presetAttributify from '@unocss/preset-attributify'
-import presetUno from '@unocss/preset-uno'
-import presetWebFonts from '@unocss/preset-web-fonts'
-import { isoImport } from 'vite-plugin-iso-import'
+import adapter from '@sveltejs/adapter-auto';
+import { vitePreprocess } from '@sveltejs/kit/vite';
 
+/** @type {import('@sveltejs/kit').Config} */
 const config = {
-  preprocess: preprocess(),
+	// Consult https://kit.svelte.dev/docs/integrations#preprocessors
+	// for more information about preprocessors
+	preprocess: vitePreprocess(),
 
-  kit: {
-    adapter: adapter(),
-    target: '#svelte',
-    vite: {
-      plugins: [
-        isoImport(),
-        UnoCss({
-          extractors: [extractorSvelte],
-          shortcuts: {},
-          presets: [
-            presetUno(),
-            presetAttributify(),
-            presetIcons({
-              extraProperties: {
-                'display': 'inline-block',
-                'vertical-align': 'middle',
-              },
-            }),
-            presetWebFonts({
-              provider: 'google', // default provider
-              fonts: {
-                // these will extend the default theme
-                sans: 'Inter',
-              },
-            })
-          ],
-        }),
-      ],
-    },
-  },
-}
+	kit: {
+		// adapter-auto only supports some environments, see https://kit.svelte.dev/docs/adapter-auto for a list.
+		// If your environment is not supported or you settled on a specific environment, switch out the adapter.
+		// See https://kit.svelte.dev/docs/adapters for more information about adapters.
+		adapter: adapter()
+	}
+};
 
-export default config
+export default config;

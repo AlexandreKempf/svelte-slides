@@ -4,14 +4,16 @@
 <head>
 	<meta charset="utf-8" />
 	<meta name="description" content="Svelte demo app" />
-	<link rel="icon" href="%svelte.assets%/favicon.png" />
+	<link rel="icon" href="%sveltekit.assets%/favicon.png" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sono">
 	<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-	%svelte.head%
+	<title>Svelte slides</title>
+	%sveltekit.head%
 </head>
 
-<body>
-	<div id="svelte">%svelte.body%</div>
+<body data-sveltekit-preload-data="hover">
+	<div id="svelte" style="display: contents">%sveltekit.body%</div>
 </body>
 
 </html>

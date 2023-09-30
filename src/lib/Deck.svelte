@@ -1,5 +1,5 @@
 <script>
-	import "uno.css";
+	import "unocss";
 	import "animate.css";
 	import "@unocss/reset/tailwind.css";
 	import { setContext, getContext } from "svelte";

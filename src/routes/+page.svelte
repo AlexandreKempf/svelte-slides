@@ -1,8 +1,8 @@
 <script>
 	import Slide from "$lib/Slide.svelte";
 	import Deck from "$lib/Deck.svelte";
-	import Vizzu from "$lib/Vizzu.svelte";
-	import { data } from "https://lib.vizzuhq.com/test/integration/test_data/infinite_data.js?client";
+	// import Vizzu from "$lib/Vizzu.svelte";
+	// import { data } from "https://lib.vizzuhq.com/test/integration/test_data/infinite_data.js?client";
 </script>
 
 <Deck>
@@ -266,7 +266,7 @@
 		</div>
 	</Slide>
 
-	<Slide>
+	<!-- <Slide>
 		<div
 			class="flex flex-wrap justify-evenly items-center mx-auto max-w-22/24 pt-20"
 		>
@@ -422,7 +422,7 @@
 				</p>
 			</div>
 		</div>
-	</Slide>
+	</Slide> -->
 
 	<Slide>
 		<div class="flex flex-col items-center justify-center mx-auto">
